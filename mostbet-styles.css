@@ -457,6 +457,26 @@ body {
     color: #ff6b35;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.bonus-amount:hover {
+    color: #ff8c42;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    transform: scale(1.05);
+}
+
+.bonus-amount:active {
+    transform: scale(0.98);
 }
 
 .bonus-description {
