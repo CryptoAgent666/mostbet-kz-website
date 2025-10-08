@@ -1,0 +1,12 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Kaspi Bank Logo -->
+  <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
+  <g transform="translate(20, 10)">
+    <!-- Kaspi Bank symbol -->
+    <circle cx="20" cy="20" r="18" fill="#FF6B35"/>
+    <text x="20" y="26" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">K</text>
+    <!-- Bank text -->
+    <text x="45" y="18" text-anchor="middle" fill="#FF6B35" font-family="Arial, sans-serif" font-size="12" font-weight="bold">KASPI</text>
+    <text x="45" y="30" text-anchor="middle" fill="#FF6B35" font-family="Arial, sans-serif" font-size="12" font-weight="bold">BANK</text>
+  </g>
+</svg>
