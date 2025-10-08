@@ -2219,6 +2219,158 @@ body {
         font-size: 20px;
         margin: 0 auto;
     }
+
+    /* Адаптивность новых руководств */
+    .bonus-guides {
+        margin: 40px 0;
+        padding: 30px 0;
+    }
+
+    .bonus-guides h2 {
+        font-size: 28px;
+    }
+
+    .bonus-guides > p {
+        font-size: 16px;
+    }
+
+    .bonus-guide-section {
+        padding: 25px 15px;
+    }
+
+    .guide-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .guide-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .guide-header h3 {
+        font-size: 20px;
+    }
+
+    .bonus-amount {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .bonus-info h4,
+    .step-by-step h4,
+    .bonus-requirements h4 {
+        font-size: 16px;
+    }
+
+    .step-item {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .step-num {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .step-text {
+        font-size: 13px;
+    }
+
+    .app-guide-section {
+        padding: 25px 15px;
+    }
+
+    .app-guide-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .app-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .app-guide-header h3 {
+        font-size: 20px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .download-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .login-guide {
+        margin: 40px 0;
+        padding: 30px 0;
+    }
+
+    .login-guide h2 {
+        font-size: 28px;
+    }
+
+    .login-guide > p {
+        font-size: 16px;
+    }
+
+    .login-method {
+        padding: 25px 15px;
+    }
+
+    .method-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .method-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .method-header h3 {
+        font-size: 20px;
+    }
+
+    .quick-option,
+    .trouble-item {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .option-icon,
+    .trouble-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .security-tips {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tip-item {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .tip-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 }
 
 /* Анимации */
@@ -3522,4 +3674,608 @@ body {
     color: #666;
     margin: 0;
     line-height: 1.4;
+}
+
+/* Руководство по бонусам */
+.bonus-guides {
+    margin: 60px 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    border-radius: 25px;
+    padding: 50px 0;
+}
+
+.bonus-guides h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bonus-guides > p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.bonus-guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.bonus-guide-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.bonus-guide-section:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+}
+
+.guide-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e8f0ff;
+}
+
+.guide-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.guide-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin: 0;
+    flex: 1;
+}
+
+.bonus-amount {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.guide-content {
+    display: grid;
+    gap: 30px;
+}
+
+.bonus-info h4,
+.step-by-step h4,
+.bonus-requirements h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.bonus-info h4::after,
+.step-by-step h4::after,
+.bonus-requirements h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-radius: 2px;
+}
+
+.bonus-info ul,
+.bonus-requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bonus-info li,
+.bonus-requirements li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+    line-height: 1.5;
+}
+
+.bonus-info li::before,
+.bonus-requirements li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bonus-info strong,
+.bonus-requirements strong {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.steps-list {
+    display: grid;
+    gap: 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    border-color: #ff6b35;
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+}
+
+.step-num {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.step-text {
+    flex: 1;
+}
+
+.step-text strong {
+    color: #1a237e;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.step-text {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Руководство по приложениям */
+.app-download-guides {
+    display: grid;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.app-guide-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.app-guide-section:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+}
+
+.app-guide-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e8f0ff;
+}
+
+.app-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+}
+
+.app-guide-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin: 0;
+}
+
+.app-guide-content {
+    display: grid;
+    gap: 30px;
+}
+
+.app-requirements h4,
+.download-steps h4,
+.app-features h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.app-requirements h4::after,
+.download-steps h4::after,
+.app-features h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    border-radius: 2px;
+}
+
+.app-requirements ul,
+.app-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app-requirements li,
+.app-features li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+    line-height: 1.5;
+}
+
+.app-requirements li::before,
+.app-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.app-requirements strong,
+.app-features strong {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.download-buttons-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.download-buttons-section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 30px;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    min-width: 150px;
+}
+
+.download-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.4);
+    color: white;
+}
+
+.download-btn i {
+    font-size: 32px;
+}
+
+.download-btn span {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.download-btn small {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.download-btn.android {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.download-btn.ios {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+}
+
+.download-btn.testflight {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.3);
+}
+
+/* Руководство по входу */
+.login-guide {
+    margin: 60px 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    border-radius: 25px;
+    padding: 50px 0;
+}
+
+.login-guide h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-guide > p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.login-methods {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 30px;
+}
+
+.login-method {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.login-method:hover {
+    border-color: #ff6b35;
+    transform: translateY(-5px);
+}
+
+.method-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e8f0ff;
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.method-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin: 0;
+}
+
+.login-steps h4,
+.quick-login-options h4,
+.login-troubleshooting h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.login-steps h4::after,
+.quick-login-options h4::after,
+.login-troubleshooting h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-radius: 2px;
+}
+
+.quick-options,
+.troubleshooting-list {
+    display: grid;
+    gap: 20px;
+}
+
+.quick-option,
+.trouble-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.quick-option:hover,
+.trouble-item:hover {
+    border-color: #ff6b35;
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+}
+
+.option-icon,
+.trouble-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.option-content h5,
+.trouble-content h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a237e;
+    margin: 0 0 8px 0;
+}
+
+.option-content p,
+.trouble-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.login-security-tips {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.login-security-tips h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 30px;
+}
+
+.security-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border-radius: 15px;
+    border: 2px solid #ffc107;
+    transition: all 0.3s ease;
+}
+
+.tip-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+}
+
+.tip-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #ffc107, #ff8f00);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.tip-content h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #856404;
+    margin: 0 0 8px 0;
+}
+
+.tip-content p {
+    font-size: 14px;
+    color: #856404;
+    margin: 0;
+    line-height: 1.5;
 }
