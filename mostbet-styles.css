@@ -332,6 +332,9 @@ body {
     font-size: 24px;
     cursor: pointer;
     color: white;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
 /* Кнопки */
@@ -4895,5 +4898,457 @@ body {
     
     .tooltip-arrow {
         right: 12px;
+    }
+}
+
+/* Mobile Navigation Fixes */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 0;
+        position: relative;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .main-nav {
+        order: 3;
+        width: 100%;
+        position: relative;
+    }
+    
+    .header-actions {
+        order: 2;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .mobile-menu-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #1a237e, #283593);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+        gap: 15px;
+        border-radius: 0 0 15px 15px;
+        margin-top: 10px;
+    }
+    
+    .nav-list.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+    
+    .nav-link {
+        padding: 12px 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background: rgba(255, 107, 53, 0.2);
+        transform: translateX(5px);
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Mobile Banner Improvements */
+@media (max-width: 768px) {
+    .main-banner {
+        padding: 40px 0;
+    }
+    
+    .banner-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .banner-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    
+    .banner-description {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .bonus-section {
+        padding: 30px 20px;
+    }
+    
+    .bonus-title {
+        font-size: 24px;
+    }
+    
+    .bonus-amount {
+        font-size: 32px;
+        padding: 12px 20px;
+    }
+    
+    .features-highlights {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .feature-block {
+        padding: 15px;
+    }
+    
+    .feature-block h4 {
+        font-size: 14px;
+    }
+    
+    .feature-block p {
+        font-size: 12px;
+    }
+}
+
+/* Mobile Promo Section */
+@media (max-width: 768px) {
+    .promo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .promo-card {
+        padding: 20px;
+    }
+    
+    .promo-card h3 {
+        font-size: 18px;
+    }
+    
+    .promo-card p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Games Section */
+@media (max-width: 768px) {
+    .games-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .game-card {
+        padding: 15px;
+    }
+    
+    .game-card h4 {
+        font-size: 16px;
+    }
+    
+    .game-card p {
+        font-size: 12px;
+    }
+    
+    .game-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Tables */
+@media (max-width: 768px) {
+    .features-table {
+        overflow-x: auto;
+    }
+    
+    .features-table table {
+        min-width: 600px;
+    }
+    
+    .features-table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .trust-category {
+        padding: 20px;
+    }
+    
+    .trust-items {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .legal-links {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .legal-text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* Extra Small Screens (320px-480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .top-bar {
+        padding: 8px 0;
+    }
+    
+    .top-bar-left {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .modern-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .btn-title {
+        font-size: 14px;
+    }
+    
+    .btn-subtitle {
+        font-size: 11px;
+    }
+    
+    .platform-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .version-badge {
+        padding: 4px 8px;
+    }
+    
+    .version-number {
+        font-size: 12px;
+    }
+    
+    .version-lang {
+        font-size: 10px;
+    }
+    
+    .auth-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .logo-o {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .banner-title {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+    
+    .banner-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .bonus-section {
+        padding: 20px 15px;
+    }
+    
+    .bonus-title {
+        font-size: 20px;
+    }
+    
+    .bonus-amount {
+        font-size: 28px;
+        padding: 10px 15px;
+    }
+    
+    .bonus-description {
+        font-size: 14px;
+    }
+    
+    .features-highlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .feature-block {
+        padding: 12px;
+    }
+    
+    .feature-block h4 {
+        font-size: 13px;
+    }
+    
+    .feature-block p {
+        font-size: 11px;
+    }
+    
+    .promo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .promo-card {
+        padding: 15px;
+    }
+    
+    .promo-card h3 {
+        font-size: 16px;
+    }
+    
+    .promo-card p {
+        font-size: 13px;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .game-card {
+        padding: 12px;
+    }
+    
+    .game-card h4 {
+        font-size: 14px;
+    }
+    
+    .game-card p {
+        font-size: 11px;
+    }
+    
+    .game-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .features-table table {
+        min-width: 500px;
+    }
+    
+    .features-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+    
+    .trust-section {
+        padding: 20px 0;
+    }
+    
+    .trust-category {
+        padding: 15px;
+    }
+    
+    .trust-item {
+        padding: 12px;
+    }
+    
+    .trust-content h5 {
+        font-size: 14px;
+    }
+    
+    .trust-content p {
+        font-size: 12px;
+    }
+    
+    .legal-link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .legal-text p {
+        font-size: 12px;
+    }
+    
+    .copyright p {
+        font-size: 12px;
+    }
+}
+
+/* Landscape Mobile Fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-banner {
+        padding: 20px 0;
+    }
+    
+    .banner-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .features-highlights {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
