@@ -646,7 +646,7 @@ body {
 
 /* Промо секция */
 .promo-section {
-    padding: 40px 0;
+    padding: 20px 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
@@ -723,7 +723,7 @@ body {
 
 /* Основной контент */
 .main-content {
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 /* Опрос */
@@ -3031,8 +3031,8 @@ body {
 
 /* Популярные игры */
 .popular-games-section {
-    margin-bottom: 50px;
-    padding: 40px 0;
+    margin-bottom: 20px;
+    padding: 20px 0;
     background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
     border-radius: 20px;
 }
@@ -3041,7 +3041,7 @@ body {
     text-align: center;
     color: #1a237e;
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
@@ -3087,15 +3087,15 @@ body {
 
 /* Быстрые действия */
 .quick-actions-section {
-    margin-bottom: 50px;
-    padding: 40px 0;
+    margin-bottom: 20px;
+    padding: 20px 0;
 }
 
 .quick-actions-section h2 {
     text-align: center;
     color: #1a237e;
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 
