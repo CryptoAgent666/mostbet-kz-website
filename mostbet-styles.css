@@ -4745,3 +4745,155 @@ body {
         font-size: 12px;
     }
 }
+
+/* Support Chat Button */
+.support-chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.support-chat-button:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.6);
+}
+
+.support-chat-button:active {
+    transform: scale(0.95);
+}
+
+.chat-icon {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.support-chat-button:hover .chat-icon {
+    transform: scale(1.1);
+}
+
+.chat-tooltip {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: rgba(26, 35, 126, 0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.support-chat-button:hover .chat-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.tooltip-arrow {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(26, 35, 126, 0.95);
+}
+
+/* Pulse animation for chat button */
+.support-chat-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    border-radius: 50%;
+    opacity: 0;
+    animation: chat-pulse 2s infinite;
+}
+
+@keyframes chat-pulse {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive chat button */
+@media (max-width: 768px) {
+    .support-chat-button {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .chat-icon {
+        font-size: 20px;
+    }
+    
+    .chat-tooltip {
+        bottom: 60px;
+        right: -10px;
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .tooltip-arrow {
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-chat-button {
+        width: 45px;
+        height: 45px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .chat-icon {
+        font-size: 18px;
+    }
+    
+    .chat-tooltip {
+        bottom: 55px;
+        right: -15px;
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    .tooltip-arrow {
+        right: 12px;
+    }
+}
