@@ -294,3 +294,44 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 1000);
     }
 });
+
+// Cookie Notification
+document.addEventListener('DOMContentLoaded', function() {
+    const cookieNotification = document.getElementById('cookie-notification');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+    
+    // Проверяем, есть ли уже сохраненное согласие
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    
+    if (!cookieConsent) {
+        // Показываем уведомление через 2 секунды после загрузки
+        setTimeout(() => {
+            cookieNotification.classList.add('show');
+        }, 2000);
+    }
+    
+    // Обработчик принятия куки
+    acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        hideCookieNotification();
+    });
+    
+    // Обработчик отклонения куки
+    declineBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        hideCookieNotification();
+    });
+    
+    function hideCookieNotification() {
+        cookieNotification.classList.remove('show');
+        cookieNotification.classList.add('hide');
+        
+        // Удаляем элемент из DOM через 0.4 секунды
+        setTimeout(() => {
+            if (cookieNotification.parentNode) {
+                cookieNotification.parentNode.removeChild(cookieNotification);
+            }
+        }, 400);
+    }
+});
