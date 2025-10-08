@@ -307,38 +307,91 @@
 
             <!-- Игровые секции -->
             <section class="games-section">
+                <div class="games-header">
+                    <h2>🎮 Популярные игры</h2>
+                    <p>Выберите категорию и наслаждайтесь лучшими играми</p>
+                </div>
+                
                 <div class="games-tabs">
-                    <button class="tab-btn active" data-tab="crash">🚀 Crash-ойындар</button>
-                    <button class="tab-btn" data-tab="casino">🎮 Казино</button>
-                    <button class="tab-btn" data-tab="live">LIVE-казино</button>
-                    <button class="tab-btn" data-tab="sports">⚽ Спорт</button>
+                    <button class="tab-btn active" data-tab="crash">
+                        <span class="tab-icon">🚀</span>
+                        <span class="tab-text">Crash-ойындар</span>
+                    </button>
+                    <button class="tab-btn" data-tab="casino">
+                        <span class="tab-icon">🎰</span>
+                        <span class="tab-text">Казино</span>
+                    </button>
+                    <button class="tab-btn" data-tab="live">
+                        <span class="tab-icon">🎪</span>
+                        <span class="tab-text">LIVE-казино</span>
+                    </button>
+                    <button class="tab-btn" data-tab="sports">
+                        <span class="tab-icon">⚽</span>
+                        <span class="tab-text">Спорт</span>
+                    </button>
                 </div>
 
                 <div class="tab-content active" id="crash">
                     <div class="games-grid">
-                        <div class="game-card crash-game">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Aviator" alt="Aviator">
-                            <h4>✈️ Aviator</h4>
-                            <p>Қазақстандағы ең танымал crash-ойын</p>
-                            <button class="btn btn-demo">Ойнау</button>
+                        <div class="game-card">
+                            <div class="game-icon aviator">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">✈️</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Aviator</h4>
+                                <p>Қазақстандағы ең танымал crash-ойын</p>
+                                <div class="game-stats">
+                                    <span class="stat">🔥 Популярное</span>
+                                    <span class="stat">💰 До 1000x</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
-                        <div class="game-card crash-game">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=JetX" alt="JetX">
-                            <h4>🚀 JetX</h4>
-                            <p>Жоғары коэффициенттер 1000x дейін</p>
-                            <button class="btn btn-demo">Ойнау</button>
+                        <div class="game-card">
+                            <div class="game-icon jetx">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🚀</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>JetX</h4>
+                                <p>Жоғары коэффициенттер 1000х дейін</p>
+                                <div class="game-stats">
+                                    <span class="stat">⚡ Быстро</span>
+                                    <span class="stat">🎯 Высокие коэф.</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
-                        <div class="game-card crash-game">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Lucky+Jet" alt="Lucky Jet">
-                            <h4>🍀 Lucky Jet</h4>
-                            <p>Авиациялық тақырып үлкен ұтыстармен</p>
-                            <button class="btn btn-demo">Ойнау</button>
+                        <div class="game-card">
+                            <div class="game-icon luckyjet">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🍀</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Lucky Jet</h4>
+                                <p>Авиациялық тақырып үлкен ұтыстармен</p>
+                                <div class="game-stats">
+                                    <span class="stat">🍀 Удача</span>
+                                    <span class="stat">💎 Большие выигрыши</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
-                        <div class="game-card crash-game">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Penalty+Shoot" alt="Penalty Shoot-out">
-                            <h4>⚽ Penalty Shoot-out</h4>
-                            <p>Футбол тақырыбы тікелей ставкалармен</p>
-                            <button class="btn btn-demo">Ойнау</button>
+                        <div class="game-card">
+                            <div class="game-icon penalty">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">⚽</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Penalty Shoot-out</h4>
+                                <p>Футбол тақырыбы тікелей ставкалармен</p>
+                                <div class="game-stats">
+                                    <span class="stat">⚽ Футбол</span>
+                                    <span class="stat">🎯 Ставки</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                     </div>
                 </div>
@@ -346,28 +399,64 @@
                 <div class="tab-content" id="casino">
                     <div class="games-grid">
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Sweet+Bonanza" alt="Sweet Bonanza">
-                            <h4>🍭 Sweet Bonanza</h4>
-                            <p>Тәтті сыйлықтар 21,100x дейін</p>
-                            <button class="btn btn-demo">Демо</button>
+                            <div class="game-icon sweet">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🍭</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Sweet Bonanza</h4>
+                                <p>Тәтті сыйлықтар 21,100x дейін</p>
+                                <div class="game-stats">
+                                    <span class="stat">🍭 Сладости</span>
+                                    <span class="stat">💰 До 21,100x</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Gates+of+Olympus" alt="Gates of Olympus">
-                            <h4>🏛️ Gates of Olympus</h4>
-                            <p>Ежелгі грек құдайлары мен алтын</p>
-                            <button class="btn btn-demo">Демо</button>
+                            <div class="game-icon gates">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🏛️</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Gates of Olympus</h4>
+                                <p>Ежелгі грек құдайлары мен алтын</p>
+                                <div class="game-stats">
+                                    <span class="stat">⚡ Молнии</span>
+                                    <span class="stat">🏆 Олимп</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Royal+Coins" alt="Royal Coins">
-                            <h4>👑 Royal Coins</h4>
-                            <p>Корольдік қазыналар</p>
-                            <button class="btn btn-demo">Демо</button>
+                            <div class="game-icon royal">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">👑</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Royal Coins</h4>
+                                <p>Корольдік сыйлықтар мен қазына</p>
+                                <div class="game-stats">
+                                    <span class="stat">👑 Королевство</span>
+                                    <span class="stat">💰 Монеты</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Aviatrix" alt="Aviatrix">
-                            <h4>🛩️ Aviatrix</h4>
-                            <p>Авиатордың әйел нұсқасы</p>
-                            <button class="btn btn-demo">Демо</button>
+                            <div class="game-icon aviatrix">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">✈️</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Aviatrix</h4>
+                                <p>Жаңа авиациялық ойын тәжірибесі</p>
+                                <div class="game-stats">
+                                    <span class="stat">✈️ Авиация</span>
+                                    <span class="stat">🆕 Новинка</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                     </div>
                 </div>
@@ -375,24 +464,64 @@
                 <div class="tab-content" id="live">
                     <div class="games-grid">
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Crazy+Time" alt="Crazy Time">
-                            <h4>🎪 Crazy Time</h4>
-                            <p>Живые дилеры 24/7</p>
+                            <div class="game-icon crazy">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🎪</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Crazy Time</h4>
+                                <p>Тікелей дилерлер 24/7</p>
+                                <div class="game-stats">
+                                    <span class="stat">🎪 Безумие</span>
+                                    <span class="stat">📺 LIVE</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Monopoly+Live" alt="Monopoly Live">
-                            <h4>🏠 Monopoly Live</h4>
-                            <p>Настолкалық ойын нақты уақытта</p>
+                            <div class="game-icon monopoly">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🎲</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Monopoly Live</h4>
+                                <p>Тікелей дилерлер 24/7</p>
+                                <div class="game-stats">
+                                    <span class="stat">🎲 Монополия</span>
+                                    <span class="stat">📺 LIVE</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Lightning+Roulette" alt="Lightning Roulette">
-                            <h4>⚡ Lightning Roulette</h4>
-                            <p>Найзағай жылдамдығымен ұтыстар</p>
+                            <div class="game-icon lightning">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">⚡</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Lightning Roulette</h4>
+                                <p>Тікелей дилерлер 24/7</p>
+                                <div class="game-stats">
+                                    <span class="stat">⚡ Молнии</span>
+                                    <span class="stat">📺 LIVE</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Mega+Wheel" alt="Mega Wheel">
-                            <h4>🎡 Mega Wheel</h4>
-                            <p>Фортунаның үлкен дөңгелегі</p>
+                            <div class="game-icon mega">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🎡</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Mega Wheel</h4>
+                                <p>Тікелей дилерлер 24/7</p>
+                                <div class="game-stats">
+                                    <span class="stat">🎡 Колесо</span>
+                                    <span class="stat">📺 LIVE</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                     </div>
                 </div>
@@ -400,24 +529,64 @@
                 <div class="tab-content" id="sports">
                     <div class="games-grid">
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Kazakhstan+Football" alt="Футбол Казахстана">
-                            <h4>⚽ Футбол Казахстана</h4>
-                            <p>Қазақстан Премьер-лигасы, Қазақстан Кубогы</p>
+                            <div class="game-icon kazakhstan">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">⚽</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Футбол Казахстана</h4>
+                                <p>Қазақстан Премьер-лигасы, Қазақстан Кубогы</p>
+                                <div class="game-stats">
+                                    <span class="stat">🇰🇿 Казахстан</span>
+                                    <span class="stat">⚽ Футбол</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Russian+Premier+League" alt="РПЛ">
-                            <h4>🇷🇺 РПЛ</h4>
-                            <p>Ресей Премьер-лигасы</p>
+                            <div class="game-icon rpl">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🇷🇺</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>РПЛ</h4>
+                                <p>Ресей Премьер-лигасы</p>
+                                <div class="game-stats">
+                                    <span class="stat">🇷🇺 Россия</span>
+                                    <span class="stat">⚽ Футбол</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Champions+League" alt="Лига чемпионов">
-                            <h4>🏆 Лига чемпионов</h4>
-                            <p>UEFA Чемпиондар Лигасы</p>
+                            <div class="game-icon champions">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🏆</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Лига чемпионов</h4>
+                                <p>UEFA Чемпиондар Лигасы</p>
+                                <div class="game-stats">
+                                    <span class="stat">🏆 Чемпионат</span>
+                                    <span class="stat">⚽ Футбол</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                         <div class="game-card">
-                            <img src="https://via.placeholder.com/200x150/ff6b35/ffffff?text=Esports" alt="Киберспорт">
-                            <h4>🎮 Киберспорт</h4>
-                            <p>CS2, Dota 2, Valorant, FIFA</p>
+                            <div class="game-icon esports">
+                                <div class="icon-bg"></div>
+                                <span class="game-emoji">🎮</span>
+                            </div>
+                            <div class="game-info">
+                                <h4>Киберспорт</h4>
+                                <p>CS2, Dota 2, Valorant, FIFA</p>
+                                <div class="game-stats">
+                                    <span class="stat">🎮 Киберспорт</span>
+                                    <span class="stat">💻 Компьютерные игры</span>
+                                </div>
+                            </div>
+                            <button class="game-btn">Ойнау</button>
                         </div>
                     </div>
                 </div>
