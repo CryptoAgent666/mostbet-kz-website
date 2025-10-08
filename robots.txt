@@ -27,7 +27,7 @@ Allow: /*.gif$
 Allow: /*.webp$
 
 # Sitemap
-Sitemap: https://mostbet.kz/sitemap.xml
+Sitemap: https://mostbet.rfembassy.kz/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
