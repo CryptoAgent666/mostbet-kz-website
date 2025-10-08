@@ -729,6 +729,71 @@
             outline-offset: 2px;
         }
 
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(30, 41, 59, 0.95);
+            border: 2px solid var(--accent-color);
+            border-radius: 25px;
+            padding: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-color);
+            color: var(--dark-bg);
+            font-weight: bold;
+        }
+
+        .lang-btn:hover:not(.active) {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-color);
+        }
+
+        /* Hidden content for other languages */
+        [lang="kk"] {
+            display: none;
+        }
+
+        body[data-lang="kk"] [lang="ru"] {
+            display: none;
+        }
+
+        body[data-lang="kk"] [lang="kk"] {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+                padding: 0.3rem;
+            }
+            
+            .lang-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
         /* Mobile menu */
         .mobile-menu-toggle {
             display: none;
@@ -1618,13 +1683,13 @@
                 <span class="logo-t">T</span>
             </div>
             <ul class="nav-links">
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg">О платформе</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg">Игры</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg">Бонусы</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg">Оплата</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg">Поддержка</a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg"><span lang="ru">О платформе</span><span lang="kk">Платформа туралы</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg"><span lang="ru">Игры</span><span lang="kk">Ойындар</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg"><span lang="ru">Бонусы</span><span lang="kk">Бонусдар</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg"><span lang="ru">Оплата</span><span lang="kk">Төлем</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg"><span lang="ru">Поддержка</span><span lang="kk">Қолдау</span></a></li>
             </ul>
-            <a href="https://l1l.pw/r7bxgd/maralfm.kg" class="cta-button">Регистрация</a>
+            <a href="https://l1l.pw/r7bxgd/maralfm.kg" class="cta-button"><span lang="ru">Регистрация</span><span lang="kk">Тіркелу</span></a>
             
             <!-- Mobile menu toggle -->
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -1637,46 +1702,58 @@
         <!-- Mobile menu -->
         <div class="mobile-menu" id="mobileMenu">
             <ul>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()">О платформе</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()">Игры</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()">Бонусы</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()">Оплата</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()">Поддержка</a></li>
-                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()" class="cta-button" style="margin: 1rem 2rem; text-align: center; display: block;">Регистрация</a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()"><span lang="ru">О платформе</span><span lang="kk">Платформа туралы</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()"><span lang="ru">Игры</span><span lang="kk">Ойындар</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()"><span lang="ru">Бонусы</span><span lang="kk">Бонусдар</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()"><span lang="ru">Оплата</span><span lang="kk">Төлем</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()"><span lang="ru">Поддержка</span><span lang="kk">Қолдау</span></a></li>
+                <li><a href="https://l1l.pw/r7bxgd/maralfm.kg" onclick="closeMobileMenu()" class="cta-button" style="margin: 1rem 2rem; text-align: center; display: block;"><span lang="ru">Регистрация</span><span lang="kk">Тіркелу</span></a></li>
             </ul>
         </div>
     </header>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('ru')">РУ</button>
+        <button class="lang-btn" onclick="switchLanguage('kk')">ҚАЗ</button>
+    </div>
 
     <div class="container">
         <!-- Google Security Banner -->
         <div class="google-security-banner">
             <div class="google-logo">G</div>
-            <div class="security-text">Этот сайт официальный и безопасный</div>
+            <div class="security-text" lang="ru">Этот сайт официальный и безопасный</div>
+            <div class="security-text" lang="kk">Бұл сайт ресми және қауіпсіз</div>
             <div class="security-shield">✓</div>
         </div>
 
         <!-- Hero Section -->
         <section class="hero" itemscope itemtype="https://schema.org/Organization">
-            <h1 itemprop="name">Мостбет Казахстан - Официальный сайт 2025</h1>
-            <p class="hero-subtitle" itemprop="description">Лучшее онлайн-казино и букмекерская контора в Казахстане</p>
+            <h1 itemprop="name" lang="ru">Мостбет Казахстан - Официальный сайт 2025</h1>
+            <h1 itemprop="name" lang="kk">Мостбет Қазақстан - Ресми сайт 2025</h1>
+            <p class="hero-subtitle" itemprop="description" lang="ru">Лучшее онлайн-казино и букмекерская контора в Казахстане</p>
+            <p class="hero-subtitle" itemprop="description" lang="kk">Қазақстандағы ең жақсы онлайн-казино және букмекерлік контора</p>
             <div class="bonus-badge" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                 <meta itemprop="description" content="Приветственный бонус 125% на первый депозит + 250 фриспинов">
                 <meta itemprop="price" content="500">
                 <meta itemprop="priceCurrency" content="KZT">
-                🎁 Бонус 125% + 250 Фриспинов
+                <span lang="ru">🎁 Бонус 125% + 250 Фриспинов</span>
+                <span lang="kk">🎁 Бонус 125% + 250 Фриспин</span>
             </div>
             <div class="download-section">
                 <a href="https://l1l.pw/r7bxgd/maralfm.kg" class="download-btn">
                     <span class="download-icon">📱</span>
                     <div>
-                        <div style="font-size: 0.9rem; color: var(--text-gray);">Скачать на</div>
+                        <div style="font-size: 0.9rem; color: var(--text-gray);" lang="ru">Скачать на</div>
+                        <div style="font-size: 0.9rem; color: var(--text-gray);" lang="kk">Жүктеп алу</div>
                         <div style="font-weight: bold;">Android</div>
                     </div>
                 </a>
                 <a href="https://l1l.pw/r7bxgd/maralfm.kg" class="download-btn">
                     <span class="download-icon">🍎</span>
                     <div>
-                        <div style="font-size: 0.9rem; color: var(--text-gray);">Скачать на</div>
+                        <div style="font-size: 0.9rem; color: var(--text-gray);" lang="ru">Скачать на</div>
+                        <div style="font-size: 0.9rem; color: var(--text-gray);" lang="kk">Жүктеп алу</div>
                         <div style="font-weight: bold;">iOS</div>
                     </div>
                 </a>
@@ -1687,19 +1764,23 @@
         <div class="stats">
             <div class="stat-card">
                 <div class="stat-number">1000+</div>
-                <div class="stat-label">Игровых автоматов</div>
+                <div class="stat-label" lang="ru">Игровых автоматов</div>
+                <div class="stat-label" lang="kk">Ойын автоматтары</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">30+</div>
-                <div class="stat-label">Провайдеров игр</div>
+                <div class="stat-label" lang="ru">Провайдеров игр</div>
+                <div class="stat-label" lang="kk">Ойын провайдерлері</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">24/7</div>
-                <div class="stat-label">Поддержка клиентов</div>
+                <div class="stat-label" lang="ru">Поддержка клиентов</div>
+                <div class="stat-label" lang="kk">Клиенттерді қолдау</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">15 мин</div>
-                <div class="stat-label">Вывод средств</div>
+                <div class="stat-label" lang="ru">Вывод средств</div>
+                <div class="stat-label" lang="kk">Қаражатты шығару</div>
             </div>
         </div>
 
@@ -1707,39 +1788,52 @@
         <div class="features">
             <div class="feature-card">
                 <div class="feature-icon">🎰</div>
-                <h3>Большой выбор игр</h3>
-                <p>Более 1000 слотов, live-казино, быстрые игры и спортивные ставки</p>
+                <h3 lang="ru">Большой выбор игр</h3>
+                <h3 lang="kk">Ойындардың көп таңдауы</h3>
+                <p lang="ru">Более 1000 слотов, live-казино, быстрые игры и спортивные ставки</p>
+                <p lang="kk">1000+ слот, live-казино, жылдам ойындар және спорт ставкалары</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">💳</div>
-                <h3>Платежи в тенге</h3>
-                <p>Kaspi Bank, Visa, MasterCard, криптовалюты и мобильные платежи</p>
+                <h3 lang="ru">Платежи в тенге</h3>
+                <h3 lang="kk">Теңгеде төлемдер</h3>
+                <p lang="ru">Kaspi Bank, Visa, MasterCard, криптовалюты и мобильные платежи</p>
+                <p lang="kk">Kaspi Bank, Visa, MasterCard, криптовалюталар және мобильді төлемдер</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⚡</div>
-                <h3>Быстрый вывод</h3>
-                <p>Вывод средств от 15 минут до 24 часов</p>
+                <h3 lang="ru">Быстрый вывод</h3>
+                <h3 lang="kk">Жылдам шығару</h3>
+                <p lang="ru">Вывод средств от 15 минут до 24 часов</p>
+                <p lang="kk">15 минуттан 24 сағатқа дейін қаражатты шығару</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🎁</div>
-                <h3>Щедрые бонусы</h3>
-                <p>Приветственный бонус, кешбэк до 10%, программа лояльности</p>
+                <h3 lang="ru">Щедрые бонусы</h3>
+                <h3 lang="kk">Сыйлық бонусдар</h3>
+                <p lang="ru">Приветственный бонус, кешбэк до 10%, программа лояльности</p>
+                <p lang="kk">Қарсы алу бонусы, 10% дейін кешбэк, сүйіспеншілік бағдарламасы</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📱</div>
-                <h3>Мобильное приложение</h3>
-                <p>Приложения для Android и iOS с полным функционалом</p>
+                <h3 lang="ru">Мобильное приложение</h3>
+                <h3 lang="kk">Мобильді қосымша</h3>
+                <p lang="ru">Приложения для Android и iOS с полным функционалом</p>
+                <p lang="kk">Android және iOS үшін толық функциясы бар қосымшалар</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🔒</div>
-                <h3>Безопасность</h3>
-                <p>Лицензия Кюрасао, шифрование данных, честная игра</p>
+                <h3 lang="ru">Безопасность</h3>
+                <h3 lang="kk">Қауіпсіздік</h3>
+                <p lang="ru">Лицензия Кюрасао, шифрование данных, честная игра</p>
+                <p lang="kk">Кюрасао лицензиясы, деректерді шифрлау, адал ойын</p>
             </div>
         </div>
 
         <!-- About Section -->
         <section id="about" itemscope itemtype="https://schema.org/AboutPage">
-            <h2 itemprop="name">📋 О платформе Мостбет</h2>
+            <h2 itemprop="name" lang="ru">📋 О платформе Мостбет</h2>
+            <h2 itemprop="name" lang="kk">📋 Мостбет платформасы туралы</h2>
             
             <h3>Что такое Мостбет казино в Казахстане?</h3>
             <p><strong>Мостбет (Mostbet)</strong> - это международная онлайн-платформа для азартных игр и ставок на спорт, которая работает на рынке Казахстана с 2009 года. Платформа предлагает широкий выбор развлечений: <a href="https://l1l.pw/r7bxgd/maralfm.kg">игровые автоматы</a>, <a href="https://l1l.pw/r7bxgd/maralfm.kg">live-казино</a>, спортивные ставки, <a href="https://l1l.pw/r7bxgd/maralfm.kg">быстрые игры</a> и многое другое. <a href="https://l1l.pw/r7bxgd/maralfm.kg">Регистрация</a> занимает менее 2 минут, а <a href="https://l1l.pw/r7bxgd/maralfm.kg">приветственный бонус</a> составляет 125% + 250 фриспинов.</p>
@@ -2589,7 +2683,8 @@
                 Получите приветственный бонус 125% + 250 фриспинов на первый депозит
             </p>
             <a href="https://l1l.pw/r7bxgd/maralfm.kg" class="cta-button" style="font-size: 1.2rem; padding: 1rem 3rem; display: inline-block; margin: 1rem;">
-                🎁 Зарегистрироваться и получить бонус
+                <span lang="ru">🎁 Зарегистрироваться и получить бонус</span>
+                <span lang="kk">🎁 Тіркеліп, бонус алу</span>
             </a>
             <p style="margin-top: 2rem; color: var(--text-gray); font-size: 0.9rem;">
                 Минимальный депозит всего 500 ₸ • Быстрый вывод через Kaspi Bank • Играйте ответственно 18+
@@ -2652,6 +2747,37 @@
     </footer>
 
     <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            // Update body data attribute
+            document.body.setAttribute('data-lang', lang);
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Save language preference
+            localStorage.setItem('preferred-language', lang);
+            
+            // Update document language
+            document.documentElement.lang = lang;
+        }
+
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred-language') || 'ru';
+            document.body.setAttribute('data-lang', savedLang);
+            document.documentElement.lang = savedLang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[onclick="switchLanguage('${savedLang}')"]`).classList.add('active');
+        });
+
         // Mobile menu functionality
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
