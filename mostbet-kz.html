@@ -778,15 +778,46 @@
         }
 
         body[data-lang="kk"] [lang="kk"] {
+            display: revert;
+        }
+        
+        body[data-lang="kk"] span[lang="kk"] {
             display: inline;
         }
         
         body[data-lang="kk"] h1[lang="kk"],
         body[data-lang="kk"] h2[lang="kk"],
         body[data-lang="kk"] h3[lang="kk"],
+        body[data-lang="kk"] h4[lang="kk"],
         body[data-lang="kk"] p[lang="kk"],
-        body[data-lang="kk"] div[lang="kk"] {
+        body[data-lang="kk"] div[lang="kk"],
+        body[data-lang="kk"] section[lang="kk"],
+        body[data-lang="kk"] header[lang="kk"],
+        body[data-lang="kk"] footer[lang="kk"] {
             display: block;
+        }
+        
+        body[data-lang="kk"] ul[lang="kk"],
+        body[data-lang="kk"] ol[lang="kk"] {
+            display: block;
+            list-style: inherit;
+        }
+        
+        body[data-lang="kk"] li[lang="kk"] {
+            display: list-item;
+        }
+        
+        body[data-lang="kk"] table[lang="kk"] {
+            display: table;
+        }
+        
+        body[data-lang="kk"] tr[lang="kk"] {
+            display: table-row;
+        }
+        
+        body[data-lang="kk"] td[lang="kk"],
+        body[data-lang="kk"] th[lang="kk"] {
+            display: table-cell;
         }
 
         @media (max-width: 768px) {
