@@ -1602,6 +1602,31 @@ body {
     .bank-logo .logo-label {
         font-size: 6px;
     }
+
+    /* Адаптивность новых секций */
+    .popular-games-grid,
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .popular-game-card,
+    .quick-action-card {
+        padding: 20px 15px;
+    }
+
+    .game-icon {
+        font-size: 36px;
+    }
+
+    .action-icon {
+        font-size: 32px;
+    }
+
+    .popular-games-section h2,
+    .quick-actions-section h2 {
+        font-size: 24px;
+    }
 }
 
 /* Анимации */
@@ -2136,4 +2161,118 @@ body {
 .support-method p {
     color: #e3f2fd;
     margin: 0;
+}
+
+/* Популярные игры */
+.popular-games-section {
+    margin-bottom: 50px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+    border-radius: 20px;
+}
+
+.popular-games-section h2 {
+    text-align: center;
+    color: #1a237e;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.popular-games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.popular-game-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(26, 35, 126, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popular-game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(26, 35, 126, 0.2);
+}
+
+.game-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.popular-game-card h3 {
+    color: #1a237e;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.popular-game-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Быстрые действия */
+.quick-actions-section {
+    margin-bottom: 50px;
+    padding: 40px 0;
+}
+
+.quick-actions-section h2 {
+    text-align: center;
+    color: #1a237e;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quick-action-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 20px rgba(26, 35, 126, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.quick-action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(26, 35, 126, 0.2);
+    border-color: #ff6b35;
+}
+
+.action-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.quick-action-card h3 {
+    color: #1a237e;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.quick-action-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
 }
