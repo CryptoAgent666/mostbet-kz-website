@@ -2962,6 +2962,20 @@
     </footer>
 
     <script>
+        // Force initial language setup
+        (function() {
+            // Immediately set default language to Russian
+            document.body.setAttribute('data-lang', 'ru');
+            document.documentElement.lang = 'ru';
+            
+            // Hide Kazakh content by default
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[lang="kk"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+            });
+        })();
+        
         // Language switching functionality
         function switchLanguage(lang) {
             // Update body data attribute
@@ -2978,11 +2992,32 @@
             
             // Update document language
             document.documentElement.lang = lang;
+            
+            // Force display update
+            if (lang === 'kk') {
+                // Show Kazakh content
+                document.querySelectorAll('[lang="ru"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('[lang="kk"]').forEach(el => {
+                    el.style.display = '';
+                });
+            } else {
+                // Show Russian content
+                document.querySelectorAll('[lang="kk"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('[lang="ru"]').forEach(el => {
+                    el.style.display = '';
+                });
+            }
         }
 
         // Load saved language preference
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('preferred-language') || 'ru';
+            
+            // Force language initialization
             document.body.setAttribute('data-lang', savedLang);
             document.documentElement.lang = savedLang;
             
@@ -2990,7 +3025,30 @@
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            document.querySelector(`[onclick="switchLanguage('${savedLang}')"]`).classList.add('active');
+            
+            const activeButton = document.querySelector(`[onclick="switchLanguage('${savedLang}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+            
+            // Force display update for current language
+            if (savedLang === 'kk') {
+                // Show Kazakh content
+                document.querySelectorAll('[lang="ru"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('[lang="kk"]').forEach(el => {
+                    el.style.display = '';
+                });
+            } else {
+                // Show Russian content (default)
+                document.querySelectorAll('[lang="kk"]').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('[lang="ru"]').forEach(el => {
+                    el.style.display = '';
+                });
+            }
         });
 
         // Mobile menu functionality
