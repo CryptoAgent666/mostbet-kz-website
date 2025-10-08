@@ -52,3 +52,4 @@ Feel free to submit issues and enhancement requests.
 ---
 
 **Note**: This is a template project for demonstration purposes.
+# hiddengems
