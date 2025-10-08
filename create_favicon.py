@@ -40,3 +40,4 @@ def create_favicon():
 
 if __name__ == "__main__":
     create_favicon()
+
