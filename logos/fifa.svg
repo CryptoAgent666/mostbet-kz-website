@@ -2,12 +2,11 @@
   <!-- FIFA Logo -->
   <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
   <g transform="translate(20, 10)">
-    <!-- FIFA symbol -->
-    <circle cx="20" cy="20" r="18" fill="#1A1A1A"/>
-    <path d="M8 20 Q20 8 32 20 Q20 32 8 20" fill="white"/>
-    <path d="M12 20 Q20 12 28 20 Q20 28 12 20" fill="#1A1A1A"/>
-    <circle cx="20" cy="20" r="4" fill="white"/>
-    <!-- FIFA text -->
-    <text x="45" y="25" text-anchor="middle" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FIFA</text>
+    <!-- FIFA symbol - clean blue text -->
+    <circle cx="20" cy="20" r="18" fill="#1A237E"/>
+    <!-- FIFA text in emblem -->
+    <text x="20" y="25" text-anchor="middle" fill="#64B5F6" font-family="Arial, sans-serif" font-size="10" font-weight="bold">FIFA</text>
+    <!-- FIFA text below -->
+    <text x="45" y="25" text-anchor="middle" fill="#1A237E" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FIFA</text>
   </g>
 </svg>

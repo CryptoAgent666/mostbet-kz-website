@@ -2,12 +2,13 @@
   <!-- NHL Logo -->
   <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
   <g transform="translate(20, 10)">
-    <!-- NHL symbol -->
-    <circle cx="20" cy="20" r="18" fill="#000000"/>
-    <rect x="12" y="12" width="16" height="16" rx="2" fill="white"/>
-    <rect x="14" y="14" width="12" height="12" rx="1" fill="#000000"/>
-    <path d="M16 16 L24 24 M24 16 L16 24" stroke="white" stroke-width="2" stroke-linecap="round"/>
-    <!-- NHL text -->
-    <text x="45" y="25" text-anchor="middle" fill="#000000" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NHL</text>
+    <!-- NHL symbol - shield shape -->
+    <circle cx="20" cy="20" r="18" fill="#1A237E"/>
+    <!-- Shield shape -->
+    <path d="M12 14 L28 14 L26 28 L14 28 Z" fill="#64B5F6"/>
+    <!-- NHL text in shield -->
+    <text x="20" y="22" text-anchor="middle" fill="#1A237E" font-family="Arial, sans-serif" font-size="8" font-weight="bold">NHL</text>
+    <!-- NHL text below -->
+    <text x="45" y="25" text-anchor="middle" fill="#1A237E" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NHL</text>
   </g>
 </svg>

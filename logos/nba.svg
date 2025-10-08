@@ -2,12 +2,15 @@
   <!-- NBA Logo -->
   <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
   <g transform="translate(20, 10)">
-    <!-- NBA symbol -->
-    <circle cx="20" cy="20" r="18" fill="#C8102E"/>
-    <path d="M12 12 L28 28 M28 12 L12 28" stroke="white" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="20" cy="20" r="6" fill="white"/>
-    <circle cx="20" cy="20" r="3" fill="#C8102E"/>
-    <!-- NBA text -->
-    <text x="45" y="25" text-anchor="middle" fill="#C8102E" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NBA</text>
+    <!-- NBA symbol - basketball player silhouette -->
+    <circle cx="20" cy="20" r="18" fill="#1A237E"/>
+    <!-- Basketball player silhouette -->
+    <path d="M12 28 L14 24 L16 26 L18 22 L20 24 L22 20 L24 22 L26 18 L28 20" stroke="#64B5F6" stroke-width="2" fill="none"/>
+    <circle cx="18" cy="20" r="2" fill="#64B5F6"/>
+    <path d="M20 20 L24 16" stroke="#64B5F6" stroke-width="2" stroke-linecap="round"/>
+    <!-- Small NBA text in silhouette -->
+    <text x="18" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="4" font-weight="bold">NBA</text>
+    <!-- NBA text below -->
+    <text x="45" y="25" text-anchor="middle" fill="#1A237E" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NBA</text>
   </g>
 </svg>
