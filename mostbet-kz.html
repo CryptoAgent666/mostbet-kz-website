@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
-    <meta name="robots" content="noindex, nofollow, notranslate">
     
     <!-- Primary Meta Tags -->
     <title>Мостбет Казахстан | Официальный сайт Mostbet KZ 2025 - Бонус 125% + 250 FS</title>
@@ -2978,41 +2977,24 @@
     </footer>
 
     <script>
-        // Force initial language setup - IMMEDIATE EXECUTION
-        (function() {
-            // Immediately set default language to Russian
+        // Simple language initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default language to Russian
             document.documentElement.lang = 'ru';
-            document.documentElement.setAttribute('data-lang', 'ru');
             document.body.setAttribute('data-lang', 'ru');
-            document.body.setAttribute('translate', 'no');
             
-            // Force Russian content visibility and hide Kazakh content
-            function forceLanguageSetup() {
-                // Hide all Kazakh content
-                const kazakhElements = document.querySelectorAll('[lang="kk"]');
-                kazakhElements.forEach(el => {
-                    el.style.display = 'none';
-                    el.setAttribute('translate', 'no');
-                });
-                
-                // Show all Russian content
-                const russianElements = document.querySelectorAll('[lang="ru"]');
-                russianElements.forEach(el => {
-                    el.style.display = '';
-                    el.setAttribute('translate', 'no');
-                });
-            }
+            // Hide Kazakh content by default
+            const kazakhElements = document.querySelectorAll('[lang="kk"]');
+            kazakhElements.forEach(el => {
+                el.style.display = 'none';
+            });
             
-            // Execute immediately if DOM is ready, otherwise wait
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', forceLanguageSetup);
-            } else {
-                forceLanguageSetup();
-            }
-            
-            // Also execute after a short delay to ensure all elements are loaded
-            setTimeout(forceLanguageSetup, 100);
-        })();
+            // Show Russian content
+            const russianElements = document.querySelectorAll('[lang="ru"]');
+            russianElements.forEach(el => {
+                el.style.display = '';
+            });
+        });
         
         // Language switching functionality
         function switchLanguage(lang) {
@@ -3031,9 +3013,8 @@
             // Update document language
             document.documentElement.lang = lang;
             
-            // Force display update
+            // Switch content visibility
             if (lang === 'kk') {
-                // Show Kazakh content
                 document.querySelectorAll('[lang="ru"]').forEach(el => {
                     el.style.display = 'none';
                 });
@@ -3041,7 +3022,6 @@
                     el.style.display = '';
                 });
             } else {
-                // Show Russian content
                 document.querySelectorAll('[lang="kk"]').forEach(el => {
                     el.style.display = 'none';
                 });
@@ -3055,7 +3035,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('preferred-language') || 'ru';
             
-            // Force language initialization
+            // Set language
             document.body.setAttribute('data-lang', savedLang);
             document.documentElement.lang = savedLang;
             
@@ -3069,21 +3049,12 @@
                 activeButton.classList.add('active');
             }
             
-            // Force display update for current language
+            // Apply saved language
             if (savedLang === 'kk') {
-                // Show Kazakh content
                 document.querySelectorAll('[lang="ru"]').forEach(el => {
                     el.style.display = 'none';
                 });
                 document.querySelectorAll('[lang="kk"]').forEach(el => {
-                    el.style.display = '';
-                });
-            } else {
-                // Show Russian content (default)
-                document.querySelectorAll('[lang="kk"]').forEach(el => {
-                    el.style.display = 'none';
-                });
-                document.querySelectorAll('[lang="ru"]').forEach(el => {
                     el.style.display = '';
                 });
             }
