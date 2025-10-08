@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Casino Slots</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="casino-container">
+        <header class="casino-header">
+            <h1 class="casino-title">
+                <span class="title-text">LUCKY CASINO</span>
+                <span class="title-subtitle">SLOT MACHINE</span>
+            </h1>
+            <div class="balance-display">
+                <span class="balance-label">BALANCE</span>
+                <span class="balance-amount" id="balance">$1000</span>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="slot-machine">
+                <div class="machine-frame">
+                    <div class="reels-container">
+                        <div class="reel" id="reel1">
+                            <div class="symbol">🍒</div>
+                            <div class="symbol">🍋</div>
+                            <div class="symbol">🍊</div>
+                            <div class="symbol">🍇</div>
+                            <div class="symbol">🔔</div>
+                            <div class="symbol">⭐</div>
+                            <div class="symbol">💎</div>
+                        </div>
+                        <div class="reel" id="reel2">
+                            <div class="symbol">🍒</div>
+                            <div class="symbol">🍋</div>
+                            <div class="symbol">��</div>
+                            <div class="symbol">🍇</div>
+                            <div class="symbol">🔔</div>
+                            <div class="symbol">⭐</div>
+                            <div class="symbol">💎</div>
+                        </div>
+                        <div class="reel" id="reel3">
+                            <div class="symbol">🍒</div>
+                            <div class="symbol">🍋</div>
+                            <div class="symbol">🍊</div>
+                            <div class="symbol">🍇</div>
+                            <div class="symbol">🔔</div>
+                            <div class="symbol">⭐</div>
+                            <div class="symbol">💎</div>
+                        </div>
+                    </div>
+                    <div class="payline"></div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="bet-controls">
+                    <div class="bet-section">
+                        <label class="bet-label">BET AMOUNT</label>
+                        <div class="bet-buttons">
+                            <button class="bet-btn" data-bet="10">$10</button>
+                            <button class="bet-btn" data-bet="25">$25</button>
+                            <button class="bet-btn" data-bet="50">$50</button>
+                            <button class="bet-btn" data-bet="100">$100</button>
+                        </div>
+                        <div class="current-bet">
+                            <span class="bet-amount" id="currentBet">$10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spin-section">
+                    <button class="spin-button" id="spinButton">
+                        <span class="spin-text">SPIN</span>
+                        <div class="spin-arrow">→</div>
+                    </button>
+                </div>
+
+                <div class="win-display">
+                    <div class="last-win" id="lastWin">LAST WIN: $0</div>
+                    <div class="total-wins" id="totalWins">TOTAL WINS: $0</div>
+                </div>
+            </div>
+
+            <div class="paytable">
+                <h3>PAYTABLE</h3>
+                <div class="payouts">
+                    <div class="payout-row">
+                        <span class="symbols">💎💎💎</span>
+                        <span class="payout">1000x</span>
+                    </div>
+                    <div class="payout-row">
+                        <span class="symbols">⭐⭐⭐</span>
+                        <span class="payout">500x</span>
+                    </div>
+                    <div class="payout-row">
+                        <span class="symbols">🔔🔔🔔</span>
+                        <span class="payout">200x</span>
+                    </div>
+                    <div class="payout-row">
+                        <span class="symbols">🍇🍇🍇</span>
+                        <span class="payout">100x</span>
+                    </div>
+                    <div class="payout-row">
+                        <span class="symbols">🍊🍊🍊</span>
+                        <span class="payout">50x</span>
+                    </div>
+                    <div class="payout-row">
+                        <span class="symbols">🍋🍋🍋</span>
+                        <span class="payout">25x</span>
+                    </div>
+                    <div class="payout-row">
+                        <span class="symbols">🍒🍒🍒</span>
+                        <span class="payout">10x</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="casino-footer">
+            <p>🎰 Play Responsibly • 18+ Only • For Entertainment Purposes</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
