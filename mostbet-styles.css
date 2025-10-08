@@ -1070,13 +1070,18 @@ body {
 }
 
 .payment-logo img {
-    height: 32px;
+    height: 50px;
     width: auto;
-    border-radius: 6px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.payment-logo:hover img {
+    transform: scale(1.05);
 }
 
 .payment-logo.kaspi img {
-    background: #ff6900;
+    background: transparent;
 }
 
 .logo-label {

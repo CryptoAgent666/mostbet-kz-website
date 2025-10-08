@@ -1,0 +1,11 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Visa Logo -->
+  <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
+  <g transform="translate(20, 15)">
+    <!-- VISA text -->
+    <text x="40" y="20" text-anchor="middle" fill="#1A1F71" font-family="Arial, sans-serif" font-size="20" font-weight="bold">VISA</text>
+    <!-- Visa blue accent -->
+    <rect x="15" y="25" width="50" height="3" fill="#1A1F71" rx="1.5"/>
+    <rect x="20" y="30" width="40" height="2" fill="#1A1F71" rx="1"/>
+  </g>
+</svg>

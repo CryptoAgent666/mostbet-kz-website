@@ -1,0 +1,10 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- WebMoney Logo -->
+  <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
+  <g transform="translate(20, 10)">
+    <!-- WebMoney W -->
+    <path d="M10 5 L15 25 L20 5 L25 5 L18 35 L13 35 L10 5 Z" fill="#045491"/>
+    <!-- WebMoney text -->
+    <text x="40" y="25" text-anchor="middle" fill="#045491" font-family="Arial, sans-serif" font-size="12" font-weight="bold">WEBMONEY</text>
+  </g>
+</svg>
