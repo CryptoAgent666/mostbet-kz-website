@@ -1,0 +1,60 @@
+# Mostbet KZ - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /user/
+Disallow: /account/
+
+# Allow CSS and JS files
+Allow: /mostbet-styles.css
+Allow: /mostbet-script.js
+Allow: /*.css$
+Allow: /*.js$
+
+# Allow logo and image files
+Allow: /logos/
+Allow: /images/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Sitemap
+Sitemap: https://mostbet.kz/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
