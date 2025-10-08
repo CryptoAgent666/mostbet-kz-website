@@ -299,19 +299,11 @@ body {
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: #ff6b35;
-    transition: width 0.3s ease;
+    display: none;
 }
 
 .nav-link:hover::after {
-    width: 80%;
+    display: none;
 }
 
 .aviator-link {
