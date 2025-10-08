@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <meta name="robots" content="noindex, nofollow, notranslate">
     
     <!-- Primary Meta Tags -->
     <title>Мостбет Казахстан | Официальный сайт Mostbet KZ 2025 - Бонус 125% + 250 FS</title>
@@ -769,8 +771,22 @@
         }
 
         /* Hidden content for other languages */
+        /* Language switching styles - Hide Kazakh content by default */
         [lang="kk"] {
-            display: none;
+            display: none !important;
+        }
+        
+        /* Force Russian content to be visible by default */
+        [lang="ru"] {
+            display: block;
+        }
+        
+        /* Inline elements should stay inline */
+        [lang="ru"] span,
+        [lang="ru"] a,
+        [lang="ru"] strong,
+        [lang="ru"] em {
+            display: inline;
         }
 
         body[data-lang="kk"] [lang="ru"] {
@@ -1716,7 +1732,7 @@
         }
     </style>
 </head>
-<body>
+    <body translate="no">
     <header>
         <nav class="container">
             <div class="logo">
@@ -2962,18 +2978,40 @@
     </footer>
 
     <script>
-        // Force initial language setup
+        // Force initial language setup - IMMEDIATE EXECUTION
         (function() {
             // Immediately set default language to Russian
-            document.body.setAttribute('data-lang', 'ru');
             document.documentElement.lang = 'ru';
+            document.documentElement.setAttribute('data-lang', 'ru');
+            document.body.setAttribute('data-lang', 'ru');
+            document.body.setAttribute('translate', 'no');
             
-            // Hide Kazakh content by default
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('[lang="kk"]').forEach(el => {
+            // Force Russian content visibility and hide Kazakh content
+            function forceLanguageSetup() {
+                // Hide all Kazakh content
+                const kazakhElements = document.querySelectorAll('[lang="kk"]');
+                kazakhElements.forEach(el => {
                     el.style.display = 'none';
+                    el.setAttribute('translate', 'no');
                 });
-            });
+                
+                // Show all Russian content
+                const russianElements = document.querySelectorAll('[lang="ru"]');
+                russianElements.forEach(el => {
+                    el.style.display = '';
+                    el.setAttribute('translate', 'no');
+                });
+            }
+            
+            // Execute immediately if DOM is ready, otherwise wait
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', forceLanguageSetup);
+            } else {
+                forceLanguageSetup();
+            }
+            
+            // Also execute after a short delay to ensure all elements are loaded
+            setTimeout(forceLanguageSetup, 100);
         })();
         
         // Language switching functionality
