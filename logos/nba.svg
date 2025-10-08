@@ -1,0 +1,13 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- NBA Logo -->
+  <rect width="120" height="60" rx="8" fill="white" stroke="#E5E5E5" stroke-width="1"/>
+  <g transform="translate(20, 10)">
+    <!-- NBA symbol -->
+    <circle cx="20" cy="20" r="18" fill="#C8102E"/>
+    <path d="M12 12 L28 28 M28 12 L12 28" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="20" cy="20" r="6" fill="white"/>
+    <circle cx="20" cy="20" r="3" fill="#C8102E"/>
+    <!-- NBA text -->
+    <text x="45" y="25" text-anchor="middle" fill="#C8102E" font-family="Arial, sans-serif" font-size="14" font-weight="bold">NBA</text>
+  </g>
+</svg>
