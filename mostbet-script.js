@@ -220,6 +220,30 @@ function showNotification(message) {
     }, 3000);
 }
 
+// FAQ аккордеон
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Закрываем все другие FAQ в той же категории
+            const category = faqItem.closest('.faq-category');
+            const allItems = category.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Переключаем текущий FAQ
+            faqItem.classList.toggle('active');
+        });
+    });
+});
+
 // Функция для обработки демо-игр
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('btn-demo')) {
